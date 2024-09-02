@@ -1,0 +1,77 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>login page</title>
+    <link rel="stylesheet" href="style.css" />
+    <h1>Contact us</h1>
+   
+
+
+
+
+  </head>
+
+  <body>
+    
+   
+
+    <div class="container">
+      <button class="button" id="myBtn">click here</button>
+    </div>
+
+    <div class="myModal">
+      <div class="popup-container"> 
+        <form >
+          <div class="div1">
+            
+            <input type="text" class="name" required />
+            <label> Name:</label>
+          </div>
+         
+
+          <div class="div2">
+            <input type="email" class="email" required />
+            <label> Email:</label>
+          </div>
+
+        
+
+          <div class="div3">
+            <textarea type="text" class="message" required></textarea>
+            <label id="div3-label"> Message:</label>
+          </div>
+
+          <br />
+          <button class="close">X</button>
+          <button class="button1">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+
+      var modal = document.getElementsByClassName("myModal")[0];
+      var btn = document.getElementById("myBtn");
+       var span = document.getElementsByClassName("close")[0];
+
+       modal.style.display = "none";
+      console.log(btn);
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+        span.onclick = function() {
+            modal.style.display = "none";
+       }
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
